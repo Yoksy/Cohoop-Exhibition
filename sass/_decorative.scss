@@ -1,0 +1,86 @@
+/* General (head, footer, misc) */
+body {
+	background-image: url("../img/bg-body.png");
+}
+
+#top-header {
+  background-color: $bg-color-blue;
+}
+
+#bottom-header {
+	background-image: url("../img/bg-bottom-header.png");
+	background-repeat: repeat-x;
+}
+
+
+#logo {
+	$width: 74px;
+	$height: 22px;
+
+	@include size($width $height);
+	margin: 0 auto;
+	background-image: url("../img/logo-cohoop.png");
+	background-repeat: no-repeat;
+
+	a {
+		display: block;
+		height: $height;
+		@include hide-text;
+	}
+}
+
+/* Registration */
+#register-steps {
+	background-image: url("../img/dotted-line.png");
+  	background-position: 0 center;
+  	background-repeat: repeat-x;
+
+  	& span {
+  		display: inline-block;
+  		width: 18px;
+    	background-image: url("../img/bg-body.png");
+  	}
+}
+
+.arrow {
+	display: block;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+
+	&.small {
+		$width: 10px;
+
+		@include size($width 10px);
+		background-image: url("../img/arrows-small.png");
+
+		&.right {
+			background-position-x: $width;
+		}
+	}
+
+	&.big {
+		@include size(22px 78px);
+		
+		&.left {
+			background-image: url("../img/arrows-big-left.png");
+		}
+		&.right {
+			background-image: url("../img/arrows-big-right.png");
+			float: right;
+		}
+	}
+
+	&.left {
+		background-position-x: 0;
+	}
+}
+
+
+/* Temp */
+#temp-decorative-loop {
+	position: absolute;
+    top: 48px;
+	left: -7px;
+    @extend .vertical;
+    @extend .vertical.loop;
+}

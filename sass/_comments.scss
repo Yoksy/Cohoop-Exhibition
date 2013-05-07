@@ -1,0 +1,52 @@
+#hoop-comments {
+	.comments {
+		@extend .clearfix;
+
+		position: relative;
+		background-color: $white-grey;
+		padding: 20px 12px;
+
+		p {
+			margin: 0;
+		}
+
+		header {
+			float: left;
+			margin-bottom: 18px;
+			width: 100%;
+		}
+
+		hgroup, img, section {
+			float: left;
+		}
+
+		hgroup {
+			padding-left: 6px;
+		}
+
+		section {
+			float: left;
+			width: 100%;
+		}
+
+		.triangle {
+			position: absolute;
+			top: 50%;
+			left: -11px;
+			content: ' ';
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 7px 10px 7px 0;
+			border-color: transparent #e2e4e4 transparent transparent;
+		}
+	}
+}
+
+#test-comment1 {
+	margin-top: 180px;
+}
+
+#test-comment2 {
+	margin-top: 260px;
+}

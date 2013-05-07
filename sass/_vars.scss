@@ -1,0 +1,33 @@
+/* Layout */
+$max-width: 1280px;
+// visual-grid: true;
+// visual-grid-color: red;
+// visual-grid-index: front;
+
+/* Reusable colors */
+$bg-color-blue: #162b54;
+$white: white;
+$black: black;
+$dark-blue: #001433;
+$dark-grey: #6d6f72;
+$light-grey: #c0c1c1;
+$gold: #f29e36;
+$light-gold: #f29e36;
+$purple-blue: #596279;
+$white-grey: #e2e4e4;
+
+/* Inputs */
+$input-padding: 3% 2%;
+$input-bg-color: #e6e6e6;
+$input-bg-color-darken: #51555b;
+$input-inset: inset 1px 1px 0px 0px rgba(208, 208, 208, 1);
+
+/* Typography */
+$major-head-color: #6d6f72;
+$alpha: 3em;
+$beta: 2.5em;
+$gamma: 2em;
+$delta: 1.4em;
+$epsilon: 1.2em;
+$luck: 1.3em;
+$zeta: 1.1em;

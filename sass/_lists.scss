@@ -1,0 +1,24 @@
+.list {
+  @extend .clearfix;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  
+  &.inline {
+    li {
+      float: left;
+    }
+  }
+
+  &.outline {
+    li {
+      float: left;
+      width: 100%;
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

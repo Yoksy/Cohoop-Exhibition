@@ -1,0 +1,107 @@
+#{$all-text-inputs}, textarea {
+	width: 100%;
+	padding: $input-padding;
+	border-radius: 2px;
+	box-shadow: $input-inset;
+	background-color: $input-bg-color;
+}
+
+input {
+	border: none;
+}
+
+input[type=radio] {
+
+}
+
+input[type=checkbox] {
+
+}
+
+input[type=submit] {
+	
+}
+
+textarea {
+	background-color: #FFF;
+	border: 1px solid $white-grey;
+	box-shadow: none;
+}
+
+button {
+	padding: 10px 16px;
+	border: 0;
+}
+
+select {
+
+}
+
+label {
+	color: $dark-grey;
+}
+
+fieldset {
+
+}
+
+.advanced-form {
+	margin-bottom: 8px;
+	text-align: left;
+
+	&.outline {
+		label {
+			display: block;
+			margin-bottom: 6px;
+		}
+	}
+
+	&.half-input {
+		float: left;
+
+		&:nth-child(odd) {
+			width: 46%;
+			margin-right: 4%;
+		}
+		&:nth-child(even) {
+			width: 50%;
+		}
+	}
+}
+
+#regular-login form {
+	input[type=submit] {
+		margin: 12px 0;
+	}
+
+	button {
+		margin-top: 24px;
+	}
+}
+
+#search-form {
+	position: relative;
+
+	input[type=text] {
+		background-color: $dark-grey;
+		padding: 2px 3px 3px 22px;
+		box-shadow: none;
+		color: $white;
+	}
+	input[type=submit] {
+		position: absolute;
+		top: 2px;
+		left: 4px;
+		background-color: transparent;
+
+	}
+}
+
+/* Hoop document */
+#hoop-textarea {
+	width: 100%;
+	max-width: 100%;
+	// tests
+	height: 1068px;
+	max-height: 1068px
+}

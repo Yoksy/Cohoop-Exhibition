@@ -1,0 +1,237 @@
+.icons {
+	display: block;
+	background-repeat: no-repeat;
+	background-position: -9999px -9999px;
+
+	&.check {
+		&:after {
+			content: ' ';
+			position: absolute;
+			top: 0;
+			right: 32px;
+			@include size(15px 12px);
+			background-image: url("../img/check.png");
+			background-repeat: no-repeat;
+			background-position: 0 0;
+		}
+	}
+}
+
+.icon {
+	@extend .icons;
+	text-indent: -9999px;
+	background-image: url("../img/icons.png");
+	
+	// Sometimes an icon have two or more size even if they do not look exactly the same
+	&.small {
+		&.comments { background-position: 0 -33px; width: 26px; height: 19px; }
+		&.favorite { background-position: 0 -649px; width: 18px; height: 18px; }
+		&.folder { background-position: 0 -696px; width: 18px; height: 18px; }
+		&.remove { background-position: 0 -798px; width: 9px; height: 9px; }
+	}
+
+	&.big {
+		&.comments { background-position: 0 -72px; width: 20px; height: 15px; }
+	}
+
+	// Regular icons (use a sprite generator)
+	&.attachment { background-position: 0 0; width: 13px; height: 13px; }
+	&.facebook { background-position: 0 -107px; width: 8px; height: 14px; }
+	&.favorite { background-position: 0 -141px; width: 17px; height: 16px; }
+	&.file { background-position: 0 -177px; width: 11px; height: 16px; }
+	&.folder { background-position: 0 -213px; width: 18px; height: 15px; }
+	&.googleplus { background-position: 0 -243px; width: 20px; height: 20px; }
+	&.hexagone { background-position: 0 -283px; width: 19px; height: 16px; }
+	&.logout { background-position: 0 -319px; width: 20px; height: 18px; }
+	&.news { background-position: 0 -357px; width: 22px; height: 16px; }
+	&.params { background-position: 0 -398px; width: 20px; height: 20px; }
+	&.pencil { background-position: 0 -438px; width: 4px; height: 14px; }
+	&.picture { background-position: 0 -472px; width: 13px; height: 13px; }
+	&.twitter { background-position: 0 -505px; width: 23px; height: 16px; }
+	&.search { background-position: 0 -541px; width: 13px; height: 15px; }
+	&.trend { background-position: 0 -576px; width: 16px; height: 14px; }
+	&.warning { background-position: 0 -610px; width: 16px; height: 14px; }
+	&.add { background-position: 0 -743px; width: 16px; height: 16px; }
+	&.chat { background-position: 0 -846px; width: 18px; height: 14px; }
+}
+
+.icon-tags {
+	@extend .icons;
+	text-indent: -9999px;
+	background-image: url("../img/icons-tags.png");
+
+	&.big {
+		@include size(42px 42px);
+		&.environment { background-position: -21px -42px; }
+		&.history { background-position: -21px -168px; }
+		&.litterature { background-position: -21px -294px; }
+		&.music { background-position: -21px -421px; }
+		&.sciences { background-position: -21px -546px; }
+		&.computer { background-position: -21px -672px; }
+
+		&:hover, &:focus, &.active, &.check {
+			&.environment { background-position: -147px -42px; }
+			&.history { background-position: -147px -168px; }
+			&.litterature { background-position: -147px -294px; }
+			&.music { background-position: -147px -210px; }
+			&.sciences { background-position: -147px -546px; }
+			&.computer { background-position: -147px -672px; }
+		}
+	}
+	
+	&.small {
+		@include size(42px 42px);
+		&.environment { background-position: -46px -755px; }
+		&.history { background-position: -46px -881px; }
+		&.litterature { background-position: -46px -1007px; }
+		&.music { background-position: -46px -1133px; }
+		&.sciences { background-position: -46px -1259px; }
+		&.computer { background-position: -46px -1385px; }
+
+		&:hover, &:focus, &.active, &.check {
+			&.environment { background-position: -399px -42px; }
+			&.history { background-position: -399px -168px; }
+			&.litterature { background-position: -399px -294px; }
+			&.music { background-position: -399px -210px; }
+			&.sciences { background-position: -399px -546px; }
+			&.computer { background-position: -399px -672px; }
+		}
+
+		&.tags-widget {
+			&.environment { background-position: -40px -755px; }
+			&.history { background-position: -40px -881px; }
+			&.litterature { background-position: -40px -1007px; }
+			&.music { background-position: -40px -1133px; }
+			&.sciences { background-position: -40px -1259px; }
+			&.computer { background-position: -40px -1385px; }
+		}
+	}
+}
+
+.icon-big {
+	@extend .icons;
+	text-indent: -9999px;
+	background-image: url("../img/icons-big.png");
+	@include size(92px 52px);
+
+	&.facebook { background-position: center 0; }
+	&.google { background-position: center -100px; }
+	&.twitter { background-position: center -203px; }
+
+}
+
+.icon-typo {
+	@extend .icons;
+	text-indent: -9999px;
+	background-image: url("../img/icons-typo.png");
+	@include size(26px 12px);
+
+	&.uppercase { background-position: -8px -15px; }
+	&.letter-modifier { background-position: -50px -15px; }
+	&.abc { background-position: -92px -15px; }
+	&.justify { background-position: -136px -15px; }
+}
+
+/* Icon state chat */
+.icon-state-chat {
+	@extend .icons;
+	background-image: url("../img/icons-chat-state.png");
+	@include size(7px);
+
+	// green
+	&.online {
+		background-position: 0 10px;
+	}
+
+	// orange
+	&.inactif {
+		background-position: 0 -67px;
+	}
+
+	// red
+	&.busy {
+		background-position: 0 -108px;
+	}
+
+	// grey
+	&.offline {
+		background-position: 0 -150px;
+	}
+}
+
+/* Horizontal and vertical icons */
+.horizontal {
+	@extend .icons;
+	background-image: url("../img/icons-horizontal.png");
+
+	&.small {
+		&.arrows {
+			@include size(5px 10px);
+
+			&.left { background-position: 0 0; }
+			&.right { background-position: -248px 0; }
+		}
+	}
+}
+
+.vertical {
+	@extend .icons;
+	background-image: url("../img/icons-vertical.png");
+
+	&.loop { background-position: -57px -50px; width: 14px; height: 24px; }
+
+	&.small {
+		.arrows { 
+			width: 9px; 
+			height: 5px; 
+			background-position-x: -147px;
+
+			&.top {
+				background-position-y: -42px;
+			}
+
+			&.down {
+				background-position-y: -168px;
+			}
+		}
+	}
+}
+
+/* Badges */
+.badge {
+	display: block;
+	position: absolute;
+	bottom: -4px;
+	right: 1px;
+	@include size(13px 14px);
+	text-indent: 0;
+	border-radius: 60em;
+	text-decoration: none;
+
+	&.gold {
+		color: $white;
+		background-color: $light-gold;
+	}
+}
+
+/* Special check case */
+#community-selection li,
+#interest-selection li,
+#feed-icon {
+	position: relative;
+}
+
+#community-selection li a:after {
+	top: 14px;
+	right: 12px;
+}
+
+/* Special widget case */
+.widget {
+	&#chat {
+		h3 {
+			padding-left: 24px;
+			text-indent: 0;
+		}
+	}
+}

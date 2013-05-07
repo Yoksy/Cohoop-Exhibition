@@ -1,0 +1,10 @@
+.blue-button {
+	color: $white !important;
+	background-color: $dark-blue;
+	padding: 10px 16px;
+	text-decoration: none;
+
+	&:hover, &:focus {
+		color: $white !important;
+	}
+}

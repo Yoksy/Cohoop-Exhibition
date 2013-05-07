@@ -1,0 +1,50 @@
+.slideshow {
+	@extend .clearfix;
+	position: relative;
+
+	.container {
+		float: left;
+		position: relative;
+	}
+
+	.container-inner {
+		float: left;
+	}
+
+	ul {
+		float: left;
+
+		.slide {
+			float: left;
+
+			a {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+
+	.slide {
+
+	}
+
+	.slideshow-arrow {
+		position: absolute;
+		width: 100%;
+
+		.arrows {
+			position: absolute;
+			top: 0;
+			width: 5px;
+			height: 10px;
+			text-indent: -9999px;
+
+			&.left {
+				left: 0;
+			}
+			&.right {
+				right: 0;
+			}
+		}
+	}
+}

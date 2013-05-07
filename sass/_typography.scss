@@ -1,0 +1,145 @@
+body {
+	font: {
+	    family: $lucida-grande;
+	    size: 62.5%;
+	    weight: normal;
+  	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font: {
+	    family: $lucida-grande;
+	    weight: normal;
+  	}
+  	line-height: 1em;
+}
+
+h1, h2, h3 {
+	color: $major-head-color;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: $alpha;
+}
+
+h2 {
+	font-size: $beta;
+}
+
+h3 {
+	font-size: $gamma;
+}
+
+h4 {
+	font-size: $delta;
+}
+
+h5, p, input, textarea, a {
+	font-size: $epsilon;
+}
+
+h6, label {
+	font-size: $zeta;
+}
+
+a {
+	text-decoration: none;
+}
+
+.align-center { text-align: center; }
+
+.align-right { text-align: right; }
+.align-left { text-align: left; }
+
+.small-text {
+	color: $light-grey;
+	font-size: 1.1em;
+}
+
+.badge {
+	font-size: $zeta;
+}
+
+/* Header */
+#bottom-header span {
+	font-size: $epsilon;
+	text-transform: uppercase;
+}
+
+/* Sidebar */
+.widget {
+	h3 {
+		font: {
+			size: $luck;
+			weight: bold;
+		}
+		color: $dark-blue;
+	}
+
+	hgroup {
+		h1 {
+			color: $black;
+		}
+		h1, h2 {
+			font-size: $zeta;
+			text-transform: none;
+		}
+	}	
+
+	.tag-list {
+	    a {
+	      font-size: $luck;
+	      color: $dark-grey;
+
+	      &:hover, &:focus, &.active {
+	      	color: $dark-blue;
+	      }
+		}
+	}
+}
+
+.list {
+	a {
+	    &:hover, &:focus, &.active {
+	      color: $dark-blue;
+	      font-weight: bold;
+	    }
+  }
+}
+
+.comments {
+	h3 {
+		font-size: $epsilon;
+		text-transform: none;
+	}
+}
+
+/* Registration */
+#register-steps {
+	& > div {
+		font-size: $gamma;
+		color: $dark-blue;
+
+		&.current {
+			color: $gold;
+		}
+	}
+}
+
+#interest-selection {
+	a {
+		color: $dark-grey;
+	}
+}
+
+#tool-bar {
+	h1 {
+		font-size: $luck;
+		color: $dark-blue;
+	}
+
+	.list-action {
+		font-size: $zeta;
+	}
+}
