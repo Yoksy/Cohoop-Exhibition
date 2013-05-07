@@ -436,8 +436,9 @@ a:hover, a:focus, a:visited {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, #tool-bar:before, #tool-bar section:before, .list:before, #hoop-comments .comments:before, .slideshow:before,
+.clearfix:before, #chatbox-area .chatbox header:before, #tool-bar:before, #tool-bar section:before, .list:before, #hoop-comments .comments:before, .slideshow:before,
 .clearfix:after,
+#chatbox-area .chatbox header:after,
 #tool-bar:after,
 #tool-bar section:after,
 .list:after,
@@ -448,14 +449,14 @@ a:hover, a:focus, a:visited {
   display: table;
   /* 2 */ }
 
-.clearfix:after, #tool-bar:after, #tool-bar section:after, .list:after, #hoop-comments .comments:after, .slideshow:after {
+.clearfix:after, #chatbox-area .chatbox header:after, #tool-bar:after, #tool-bar section:after, .list:after, #hoop-comments .comments:after, .slideshow:after {
   clear: both; }
 
 /*
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.clearfix, #tool-bar, #tool-bar section, .list, #hoop-comments .comments, .slideshow {
+.clearfix, #chatbox-area .chatbox header, #tool-bar, #tool-bar section, .list, #hoop-comments .comments, .slideshow {
   *zoom: 1; }
 
 /* Overlay */
@@ -582,6 +583,14 @@ a:hover .overlay, a.active .overlay, a.check .overlay {
     background-position: 0 -846px;
     width: 18px;
     height: 14px; }
+  .icon.loop {
+    background-position: 1px -889px;
+    width: 16px;
+    height: 16px; }
+  .icon.cross {
+    background-position: 1px -931px;
+    width: 16px;
+    height: 16px; }
 
 .icon-tags {
   text-indent: -9999px;
@@ -596,23 +605,23 @@ a:hover .overlay, a.active .overlay, a.check .overlay {
     .icon-tags.big.litterature {
       background-position: -21px -294px; }
     .icon-tags.big.music {
-      background-position: -21px -421px; }
+      background-position: -21px -419px; }
     .icon-tags.big.sciences {
       background-position: -21px -546px; }
     .icon-tags.big.computer {
       background-position: -21px -672px; }
     .icon-tags.big:hover.environment, .icon-tags.big:focus.environment, .icon-tags.big.active.environment, .icon-tags.big.check.environment {
-      background-position: -147px -42px; }
+      background-position: -147px -44px; }
     .icon-tags.big:hover.history, .icon-tags.big:focus.history, .icon-tags.big.active.history, .icon-tags.big.check.history {
-      background-position: -147px -168px; }
+      background-position: -147px -170px; }
     .icon-tags.big:hover.litterature, .icon-tags.big:focus.litterature, .icon-tags.big.active.litterature, .icon-tags.big.check.litterature {
-      background-position: -147px -294px; }
+      background-position: -147px -296px; }
     .icon-tags.big:hover.music, .icon-tags.big:focus.music, .icon-tags.big.active.music, .icon-tags.big.check.music {
-      background-position: -147px -210px; }
+      background-position: -147px -421px; }
     .icon-tags.big:hover.sciences, .icon-tags.big:focus.sciences, .icon-tags.big.active.sciences, .icon-tags.big.check.sciences {
-      background-position: -147px -546px; }
+      background-position: -147px -548px; }
     .icon-tags.big:hover.computer, .icon-tags.big:focus.computer, .icon-tags.big.active.computer, .icon-tags.big.check.computer {
-      background-position: -147px -672px; }
+      background-position: -147px -674px; }
   .icon-tags.small {
     width: 42px;
     height: 42px; }
@@ -1130,7 +1139,8 @@ body {
 /* Ressources */
 #ressources .list a {
   float: left;
-  display: block; }
+  display: block;
+  overflow: hidden; }
 #ressources .list img {
   float: left;
   margin-top: 4px; }
@@ -1138,7 +1148,10 @@ body {
   float: left;
   max-width: 75%;
   max-height: 38px;
-  padding-left: 12px; }
+  padding-left: 12px;
+  padding-right: 6px; }
+#ressources .list a:hover hgroup, #ressources .list a:focus hgroup, #ressources .list a.active hgroup {
+  padding-right: 0; }
 
 /* Chat */
 #chat h3 {
@@ -1150,6 +1163,78 @@ body {
   height: auto;
   width: 100%;
   padding: 6px 0 6px 16px; }
+
+/* Chatbox */
+#chatbox-area {
+  width: 60%;
+  position: fixed;
+  bottom: 0;
+  right: 0; }
+  #chatbox-area .chatbox-holder {
+    float: left;
+    width: 100%; }
+  #chatbox-area .chatbox {
+    float: right;
+    width: 230px;
+    margin: 0 6px; }
+    #chatbox-area .chatbox.close {
+      width: 160px;
+      margin-top: 182px; }
+      #chatbox-area .chatbox.close .action-area .loop, #chatbox-area .chatbox.close .content {
+        display: none; }
+      #chatbox-area .chatbox.close header {
+        background-color: #89a6e0;
+        border-bottom: 0; }
+        #chatbox-area .chatbox.close header .action-area a:hover, #chatbox-area .chatbox.close header .action-area a:focus, #chatbox-area .chatbox.close header .action-area a.active {
+          background-color: #b1c5eb; }
+    #chatbox-area .chatbox header {
+      padding: 6px 8px 5px;
+      background-color: #162b54;
+      border: 1px solid #545658;
+      cursor: pointer; }
+      #chatbox-area .chatbox header .name {
+        float: left;
+        max-width: 116px; }
+        #chatbox-area .chatbox header .name span {
+          display: inline-block;
+          text-overflow: ellipsis; }
+      #chatbox-area .chatbox header .action-area {
+        float: right;
+        margin-left: 6px; }
+        #chatbox-area .chatbox header .action-area a {
+          float: left;
+          margin-right: 8px; }
+          #chatbox-area .chatbox header .action-area a:hover, #chatbox-area .chatbox header .action-area a:focus, #chatbox-area .chatbox header .action-area a.active {
+            background-color: #21407c; }
+          #chatbox-area .chatbox header .action-area a:last-child {
+            margin-right: 0; }
+    #chatbox-area .chatbox .content {
+      float: left;
+      width: 100%;
+      border: 1px solid #6d6f72;
+      border-bottom: none;
+      background-color: #fff; }
+    #chatbox-area .chatbox .inner-chat-content {
+      float: left;
+      width: 100%;
+      max-height: 158px;
+      overflow-y: auto; }
+    #chatbox-area .chatbox .chat-message {
+      float: left;
+      clear: left;
+      border-bottom: 1px solid #e2e4e4;
+      padding: 8px; }
+      #chatbox-area .chatbox .chat-message .avatar-placeholder {
+        float: left; }
+      #chatbox-area .chatbox .chat-message .message-placeholder {
+        float: left;
+        margin-left: 6px;
+        max-width: 160px; }
+        #chatbox-area .chatbox .chat-message .message-placeholder p {
+          margin: 0; }
+    #chatbox-area .chatbox .inner-chat-input {
+      float: left;
+      width: 100%; }
 
 /* Main content */
 #container {
@@ -1171,9 +1256,13 @@ body {
   } */ }
 
 /* Footer */
+/*******************************************************/
+/* Inner pages
+/*******************************************************/
+/* HOOP */
 /* Pad */
 #tool-bar {
-  padding: 24px 0; }
+  margin: 24px 0; }
   #tool-bar h1 {
     float: left;
     display: inline-block; }
@@ -1204,7 +1293,8 @@ body {
       margin-right: 1.2%; }
 
 /* Comments */
-/* Registration page */
+/* FEED */
+/* REGISTRATION */
 #head-register {
   padding: 50px 0 76px; }
   #head-register h2 {
@@ -1379,7 +1469,8 @@ a {
   font-size: 1.1em; }
 
 .badge {
-  font-size: 1.1em; }
+  font-size: 1em;
+  font-style: normal; }
 
 /* Header */
 #bottom-header span {
@@ -1402,14 +1493,24 @@ a {
   .widget .tag-list a:hover, .widget .tag-list a:focus, .widget .tag-list a.active {
     color: #001433; }
 
-.list a:hover, .list a:focus, .list a.active {
-  color: #001433;
-  font-weight: bold; }
+/* Lists */
+.list a {
+  font-weight: normal; }
+  .list a:hover, .list a:focus, .list a.active {
+    color: #001433; }
+    .list a:hover h1, .list a:hover h2, .list a:hover h3, .list a:focus h1, .list a:focus h2, .list a:focus h3, .list a.active h1, .list a.active h2, .list a.active h3 {
+      font-weight: bold; }
 
+/* Ressources widget */
+#ressources .list a:hover h2, #ressources .list a:focus h2, #ressources .list a.active h2 {
+  font-weight: normal; }
+
+/* Comments */
 .comments h3 {
   font-size: 1.2em;
   text-transform: none; }
 
+/* Chatbox */
 /* Registration */
 #register-steps > div {
   font-size: 2em;
@@ -1420,11 +1521,27 @@ a {
 #interest-selection a {
   color: #6d6f72; }
 
+/* Toolbar */
 #tool-bar h1 {
   font-size: 1.3em;
   color: #001433; }
-#tool-bar .list-action {
+#tool-bar .action-file a {
   font-size: 1.1em; }
+#tool-bar .action-file a:hover, #tool-bar .action-file a:focus, #tool-bar .action-file a.active {
+  font-weight: normal !important; }
+
+/* Chatbox */
+.chatbox .name {
+  font-size: 1.2em; }
+  .chatbox .name a {
+    color: white;
+    font-size: 1.2em; }
+    .chatbox .name a:hover, .chatbox .name a:focus, .chatbox .name a.active {
+      text-decoration: underline; }
+
+form {
+  float: left;
+  width: auto; }
 
 input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], textarea {
   width: 100%;
@@ -1481,11 +1598,26 @@ label {
     background-color: transparent; }
 
 /* Hoop document */
+#document form {
+  width: 100%; }
+
 #hoop-textarea {
   width: 100%;
   max-width: 100%;
   height: 1068px;
   max-height: 1068px; }
+
+/* Chatbox */
+.chatbox .inner-chat-input {
+  border-top: 1px solid #c0c1c1; }
+.chatbox form {
+  width: 100%; }
+.chatbox input[type=text] {
+  background-color: #fff;
+  width: 100%;
+  padding: 4px 2px 4px 3px;
+  border-radius: 0;
+  box-shadow: none; }
 
 .list {
   display: inline-block;
@@ -1493,12 +1625,14 @@ label {
   width: 100%; }
   .list.inline li {
     float: left; }
-  .list.outline li {
-    float: left;
-    width: 100%;
-    margin-bottom: 8px; }
-    .list.outline li:last-child {
-      margin-bottom: 0; }
+  .list.outline {
+    clear: left; }
+    .list.outline li {
+      float: left;
+      width: 100%;
+      margin-bottom: 8px; }
+      .list.outline li:last-child {
+        margin-bottom: 0; }
 
 #hoop-comments .comments {
   position: relative;

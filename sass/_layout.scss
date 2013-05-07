@@ -267,6 +267,7 @@ body {
     a {
       float: left;
       display: block;
+      overflow: hidden;
     }
 
     img {
@@ -279,6 +280,11 @@ body {
       max-width: 75%;
       max-height: 38px;
       padding-left: 12px;
+      padding-right: 6px;
+    }
+
+    a:hover hgroup , a:focus hgroup , a.active hgroup {
+      padding-right: 0;
     }
   }
 }
@@ -298,6 +304,133 @@ body {
       height: auto;
       width: 100%;
       padding: 6px 0 6px 16px;
+    }
+  }
+}
+
+/* Chatbox */
+#chatbox-area {
+  width: 60%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  .chatbox-holder {
+    float: left;
+    width: 100%;
+  }
+
+  .chatbox {
+    float: right;
+    width: 230px;
+    margin: 0 6px;
+
+    &.close {
+      width: 160px;
+      margin-top: 182px;
+
+      .action-area .loop, .content {
+        display: none;
+      }
+
+      header {
+        background-color: lighten($bg-color-blue, 50%);
+        border-bottom: 0;
+
+        .action-area {
+          a {
+            &:hover, &:focus, &.active {
+              background-color: lighten($bg-color-blue, 60%);
+            }
+          }
+        }
+      }
+    }
+
+    header {
+      @extend .clearfix;
+
+      padding: 6px 8px 5px;
+      background-color: $bg-color-blue;
+      border: 1px solid darken($dark-grey, 10%);
+      cursor: pointer;
+
+      .name {
+        float: left;
+        max-width: 116px;
+
+        span {
+          display: inline-block;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .action-area {
+        float: right;
+        margin-left: 6px;
+
+        a {
+          float: left;
+          margin-right: 8px;
+
+          &:hover, &:focus, &.active {
+            background-color: lighten($bg-color-blue, 10%);
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .content {
+      float: left;
+      width: 100%;
+      border: 1px solid $dark-grey;
+      border-bottom: none;
+      background-color: #fff;
+    }
+
+    .inner-chat-content {
+      float: left;
+      width: 100%;
+      max-height: 158px;
+      overflow-y: auto;
+    }
+
+    .chat-message {
+      float: left;
+      clear: left;
+      border-bottom: 1px solid $white-grey;
+      padding: 8px;
+
+       .avatar-placeholder {
+        float: left;
+
+        img {
+
+        }
+      }
+      
+      .message-placeholder {
+        float: left;
+        margin-left: 6px;
+        max-width: 160px;
+        
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .inner-chat-input {
+      float: left;
+      width: 100%;
+
+      input {
+
+      }
     }
   }
 }
@@ -326,10 +459,14 @@ body {
 
 /* Footer */
 
+/*******************************************************/
+/* Inner pages
+/*******************************************************/
+/* HOOP */
 /* Pad */
 #tool-bar {
   @extend .clearfix;
-  padding: 24px 0;
+  margin: 24px 0;
   
   h1 {
     float: left;
@@ -396,7 +533,10 @@ body {
 
 }
 
-/* Registration page */
+/* FEED */
+
+
+/* REGISTRATION */
 #head-register {
   padding: 50px 0 76px;
 
@@ -485,7 +625,7 @@ body {
       display: inline-block;
 
     }
-
+ 
     a:first-child {
       margin-right: 5px;
     }
