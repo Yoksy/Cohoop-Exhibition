@@ -58,7 +58,10 @@ a {
 }
 
 .badge {
-	font-size: $zeta;
+	font: {
+		size: $micro;
+		style: normal;
+	}
 }
 
 /* Header */
@@ -99,21 +102,43 @@ a {
 	}
 }
 
+/* Lists */
 .list {
 	a {
+		font-weight: normal;
+
 	    &:hover, &:focus, &.active {
 	      color: $dark-blue;
-	      font-weight: bold;
+
+		    h1, h2, h3 {
+		    	font-weight: bold;
+		    }
 	    }
-  }
+  	}
 }
 
+/* Ressources widget */
+#ressources {
+	.list {
+		a {
+			&:hover, &:focus, &.active {
+			    h2 {
+			    	font-weight: normal;
+			    }
+	   		}
+		}
+	}
+}
+
+/* Comments */
 .comments {
 	h3 {
 		font-size: $epsilon;
 		text-transform: none;
 	}
 }
+
+/* Chatbox */
 
 /* Registration */
 #register-steps {
@@ -133,13 +158,28 @@ a {
 	}
 }
 
+/* Toolbar */
 #tool-bar {
 	h1 {
 		font-size: $luck;
 		color: $dark-blue;
 	}
 
-	.list-action {
-		font-size: $zeta;
+	.action-file {
+		a {
+			font-size: $zeta;
+		}
+
+		a:hover, a:focus, a.active {
+			font-weight: normal !important;
+		}
+	}
+}
+
+/* Chatbox */
+.chatbox {
+	.name {
+		color: $white;
+		font-size: $epsilon;
 	}
 }

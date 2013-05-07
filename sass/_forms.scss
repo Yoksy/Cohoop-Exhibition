@@ -1,3 +1,8 @@
+form {
+	float: left;
+	width: auto;
+}
+
 #{$all-text-inputs}, textarea {
 	width: 100%;
 	padding: $input-padding;
@@ -98,10 +103,35 @@ fieldset {
 }
 
 /* Hoop document */
+#document {
+	form {
+		width: 100%;
+	}
+}
+
 #hoop-textarea {
 	width: 100%;
 	max-width: 100%;
 	// tests
 	height: 1068px;
 	max-height: 1068px
+}
+
+/* Chatbox */
+.chatbox {
+	.inner-chat-input {
+		border-top: 1px solid $light-grey;
+		border-left: 1px solid $dark-grey;
+		border-right: 1px solid $dark-grey;
+	}
+	form {
+		width: 100%;
+	}
+	input[type=text] {
+		background-color: #fff;
+		width: 100%;
+		padding: 4px 2px 4px 3px;
+		border-radius: 0;
+		box-shadow: none;
+	}
 }

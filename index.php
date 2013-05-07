@@ -72,7 +72,9 @@ if (empty($_GET['p']))
                             <nav class="clearfix">
                                 <ul>
                                     <li id="feed-icon">
-                                        <a href="#" class="icon news"><span class="badge gold">2</span></a>
+                                        <a href="#" class="icon news">
+                                            <i class="badge gold">2</i>
+                                        </a>
                                     </li>
                                     <li><a href="#" class="icon hexagone"></a></li>
                                     <li><a href="#" class="icon favorite"></a></li>
@@ -271,7 +273,7 @@ if (empty($_GET['p']))
                     <div id="sidebar" class="inner-span-column-2 omega">
                         <div id="tags" class="widget">
                             <h3>Tags</h3>
-                            <ul class="tag-list">
+                            <ul class="tag-list list outline">
                                 <li>
                                     <a href="#" class="icon-tags environment small tags-widget">Environment</a>
                                     <a href="#" class="icon remove small tags-widget"></a>
@@ -319,7 +321,7 @@ if (empty($_GET['p']))
                                         <img src="medias/documents/previews/01.png" alt="" width="28" height="28">
                                         <hgroup>
                                             <h2>Related</h2>
-                                            <h1>Traité sur l'economie des sciences</h1>
+                                            <h1><span>Traité sur l'economie biologique</span></h1>
                                         </hgroup>
                                     </a>
                                 </li>
@@ -328,7 +330,7 @@ if (empty($_GET['p']))
                                         <img src="medias/documents/previews/01.png" alt="" width="28" height="28">
                                         <hgroup>
                                             <h2>Related</h2>
-                                            <h1>Traité sur l'economie des sciences</h1>
+                                            <h1><span>Ouvrage sur le processus de developpement amphibique</span></h1>
                                         </hgroup>
                                     </a>
                                 </li>
@@ -337,7 +339,7 @@ if (empty($_GET['p']))
                                         <img src="medias/documents/previews/01.png" alt="" width="28" height="28">
                                         <hgroup>
                                             <h2>Related</h2>
-                                            <h1>Traité sur l'economie des sciences</h1>
+                                            <h1><span>Essai sur la metamorphose</span></h1>
                                         </hgroup>
                                     </a>
                                 </li>
@@ -371,7 +373,7 @@ if (empty($_GET['p']))
                                 </div>
                             </header>
                             <section class="span-column-12">
-                                <div class="inner-span-column-2 omega">
+                                <div class="inner-span-column-3 omega">
                                     <ul class="list inline action-file">
                                         <li><a href="#">File</a></li>
                                         <li><a href="#">Edit</a></li>
@@ -379,7 +381,7 @@ if (empty($_GET['p']))
                                         <li><a href="#">Insert</a></li>
                                     </ul>
                                 </div>
-                                <div class="inner-span-column-10">
+                                <div class="inner-span-column-9">
                                     <ul class="list inline action-typo">
                                         <li><a href="#" class="icon-typo uppercase"></a></li>
                                         <li><a href="#" class="icon-typo letter-modifier"></a></li>
@@ -437,10 +439,75 @@ if (empty($_GET['p']))
 
             <?php endif; ?>
             
-            
-
         </div>
 
+        <?php if ($_GET['s'] == 'hoop'): ?>
+        <div id="chatbox-area">
+            <div class="chatbox-holder">
+                <div class="chatbox open">
+                    <header>
+                        <h4 class="name">Barbara Latvin</h4>
+                        <div class="action-area">
+                            <a href="#" class="icon loop small">Connected</a>
+                            <a href="#" class="icon cross small">Close chat</a>
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div class="inner-chat">
+                            <div class="inner-chat-content">
+                                <!-- #chat-message-$.chat-message*6>(.avatar-placeholder>img)+(.message-placeholder>p{test}) -->
+                                <div id="chat-1-message-1" class="chat-message">
+                                    <div class="avatar-placeholder">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="message-placeholder">
+                                        <p>vnfd vn dfkvb dfj bvdf hbf vhjvbfhjdvjhvfj fdjhv hjfg vfdgf vggfkvfsdhjvfdhv kjbvnfdkbvdfk kjb dfkbbhfidb idbgfibgfu ygdf</p>
+                                    </div>
+                                </div>
+                                <div id="chat-1-message-2" class="chat-message">
+                                    <div class="avatar-placeholder"><img src="" alt=""></div>
+                                    <div class="message-placeholder">
+                                        <p>test</p>
+                                    </div>
+                                </div>
+                                <div id="chat-1-message-3" class="chat-message">
+                                    <div class="avatar-placeholder"><img src="" alt=""></div>
+                                    <div class="message-placeholder">
+                                        <p>test</p>
+                                    </div>
+                                </div>
+                                <div id="chat-1-message-4" class="chat-message">
+                                    <div class="avatar-placeholder"><img src="" alt=""></div>
+                                    <div class="message-placeholder">
+                                        <p>test</p>
+                                    </div>
+                                </div>
+                                <div id="chat-1-message-5" class="chat-message">
+                                    <div class="avatar-placeholder"><img src="" alt=""></div>
+                                    <div class="message-placeholder">
+                                        <p>test</p>
+                                    </div>
+                                </div>
+                                <div id="chat-1-message-6" class="chat-message">
+                                    <div class="avatar-placeholder"><img src="" alt=""></div>
+                                    <div class="message-placeholder">
+                                        <p>test</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inner-chat-input">
+                                <form action="#" method="post">
+                                    <input type="text" name="chat-message-input" id="chat-message-input">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
+
+        <script src="js/vendor/jquery-1.9.1.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
     </body>
