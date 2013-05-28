@@ -147,9 +147,11 @@ body {
 }
 
 /* Sidebar */
+.page-hoop #sidebar {
+  margin-top: 122px;
+}
 #sidebar {
   margin-left: 2.35765%;
-  margin-top: 122px;
 
   h3 {
     margin-bottom: 16px;
@@ -419,7 +421,11 @@ body {
         max-width: 160px;
         
         p {
-          margin: 0;
+          margin: 6px;
+
+          &:first-child {
+            margin-top: 0;
+          }
         }
       }
     }
