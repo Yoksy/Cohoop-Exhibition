@@ -1,0 +1,272 @@
+/* 
+*
+* UI Classes
+*
+*/
+.ui {
+	position: relative;
+}
+
+
+
+/*
+* Buttons
+*/
+.ui--btn {
+	@include typography-button();
+	display: block;
+	text-decoration: none;
+}
+
+.ui--btn-small { padding: 10px 16px; }
+
+.ui--btn-medium {  }
+
+.ui--btn-big { padding: 30px 12px 22px; }
+
+.ui--btn-grey {
+	color: $white;
+	background-color: $dark-grey;
+
+	&:hover, &:focus {
+		background-color: lighten($dark-grey, 10%);
+	}
+}
+
+.ui--btn-blue {
+	color: $white;
+	background-color: $dark-blue;
+
+	&:hover, &:focus {
+		background-color: lighten($dark-blue, 10%);
+	}
+}
+
+
+
+/* 
+* Icons
+*/
+.ui--ico {
+	display: block;
+	background-image: url('images/icon.png');
+	background-repeat: no-repeat;
+}
+
+/* Regular icons */
+.ui--ico--regular {
+	@extend .hide-text;
+	background-image: url("../img/icons.png");
+}
+
+.ui--ico--regular--small-comments { background-position: 0 -33px; width: 26px; height: 19px; }
+.ui--ico--regular--small-favorite { background-position: 0 -649px; width: 18px; height: 18px; }
+.ui--ico--regular--small-folder { background-position: 0 -696px; width: 18px; height: 18px; }
+.ui--ico--regular--small-remove { background-position: 0 -798px; width: 9px; height: 9px; }
+
+.ui--ico--regular--medium-attachment { background-position: 0 0; width: 13px; height: 13px; }
+.ui--ico--regular--medium-facebook { background-position: 0 -107px; width: 8px; height: 14px; }
+.ui--ico--regular--medium-favorite { background-position: 0 -141px; width: 17px; height: 16px; }
+.ui--ico--regular--medium-file { background-position: 0 -177px; width: 11px; height: 16px; }
+.ui--ico--regular--medium-folder { background-position: 0 -213px; width: 18px; height: 15px; }
+.ui--ico--regular--medium-googleplus { background-position: 0 -243px; width: 20px; height: 20px; }
+.ui--ico--regular--medium-hexagone { background-position: 0 -283px; width: 19px; height: 16px; }
+.ui--ico--regular--medium-logout { background-position: 0 -319px; width: 20px; height: 18px; }
+.ui--ico--regular--medium-news { background-position: 0 -357px; width: 22px; height: 16px; }
+.ui--ico--regular--medium-params { background-position: 0 -398px; width: 20px; height: 20px; }
+.ui--ico--regular--medium-pencil { background-position: 0 -438px; width: 4px; height: 14px; }
+.ui--ico--regular--medium-picture { background-position: 0 -472px; width: 13px; height: 13px; }
+.ui--ico--regular--medium-twitter { background-position: 0 -505px; width: 23px; height: 16px; }
+.ui--ico--regular--medium-search { background-position: 0 -541px; width: 13px; height: 15px; }
+.ui--ico--regular--medium-trend { background-position: 0 -576px; width: 16px; height: 14px; }
+.ui--ico--regular--medium-warning { background-position: 0 -610px; width: 16px; height: 14px; }
+.ui--ico--regular--medium-add { background-position: 0 -743px; width: 16px; height: 16px; }
+.ui--ico--regular--medium-chat { background-position: 0 -846px; width: 18px; height: 14px; }
+.ui--ico--regular--medium-loop { background-position: 1px -889px; width: 16px; height: 16px; }
+.ui--ico--regular--medium-cross { background-position: 1px -931px; width: 16px; height: 16px; }
+
+.ui--ico--regular--big-comments { background-position: 0 -72px; width: 20px; height: 15px; }
+
+/* Big icons */
+.ui--ico--big {
+	@extend .hide-text;
+	@include size(92px 52px);
+	background-image: url("../img/icons-big.png");
+}
+
+.ui--ico--big-facebook { background-position: center 0; }
+.ui--ico--big-google { background-position: center -100px; }
+.ui--ico--big-twitter { background-position: center -203px; }
+
+/* Tags icons */
+.ui--ico--tags {
+	background-image: url("../img/icons-tags.png");
+	@include size(42px 42px);
+}
+
+.ui--ico--tags--small-environment { 
+	background-position: -46px -755px;
+	&:hover, &:focus, &.active, &.check { background-position: -399px -42px; }
+}
+
+.ui--ico--tags--small-history { 
+	background-position: -46px -881px;
+	&:hover, &:focus, &.active, &.check { background-position: -399px -168px; }
+}
+
+.ui--ico--tags--small-litterature { 
+	background-position: -46px -1007px;
+	&:hover, &:focus, &.active, &.check { background-position: -399px -294px; }
+}
+
+.ui--ico--tags--small-music { 
+	background-position: -46px -1133px;
+	&:hover, &:focus, &.active, &.check { background-position: -399px -210px; }
+}
+
+.ui--ico--tags--small-sciences { 
+	background-position: -46px -1259px;
+	&:hover, &:focus, &.active, &.check { background-position: -399px -546px; }
+}
+
+.ui--ico--tags--small-computer { 
+	background-position: -46px -1385px;
+	&:hover, &:focus, &.active, &.check { background-position: -399px -672px; }
+}
+
+
+.ui--ico--tags--big-environment { 
+	background-position: -21px -42px;
+	&:hover, &:focus, &.active, &.check { background-position: -147px -44px; }
+}
+.ui--ico--tags--big-history { 
+	background-position: -21px -168px; 
+	&:hover, &:focus, &.active, &.check { background-position: -147px -170px; }
+}
+.ui--ico--tags--big-litterature { 
+	background-position: -21px -294px; 
+	&:hover, &:focus, &.active, &.check { background-position: -147px -296px; }
+}
+.ui--ico--tags--big-music { 
+	background-position: -21px -419px; 
+	&:hover, &:focus, &.active, &.check { background-position: -147px -421px; }
+}
+.ui--ico--tags--big-sciences { 
+	background-position: -21px -546px; 
+	&:hover, &:focus, &.active, &.check { background-position: -147px -548px; }
+}
+.ui--ico--tags--big-computer { 
+	background-position: -21px -672px; 
+	&:hover, &:focus, &.active, &.check { background-position: -147px -674px; }
+}
+
+.ui--ico--tags-widget-environment { background-position: -40px -755px; }
+.ui--ico--tags-widget-history { background-position: -40px -881px; }
+.ui--ico--tags-widget-litterature { background-position: -40px -1007px; }
+.ui--ico--tags-widget-music { background-position: -40px -1133px; }
+.ui--ico--tags-widget-sciences { background-position: -40px -1259px; }
+.ui--ico--tags-widget-computer { background-position: -40px -1385px; }
+
+/* Typography icons */
+.ui--ico--typo {
+	@include size(26px 12px);
+	background-image: url("../img/icons-typo.png");
+}
+
+.ui--ico--typo-uppercase { background-position: -8px -15px; }
+.ui--ico--typo-letter-modifier { background-position: -50px -15px; }
+.ui--ico--typo-abc { background-position: -92px -15px; }
+.ui--ico--typo-justify { background-position: -136px -15px; }
+
+/* Chat icons */
+.ui--ico--chat {
+	@include size(7px);
+	background-image: url("../img/icons-chat-state.png");
+}
+
+.ui--ico--chat-online {	background-position: 0 10px; }
+.ui--ico--chat-inactif { background-position: 0 -67px; }
+.ui--ico--chat-busy { background-position: 0 -108px; }
+.ui--ico--chat-offline { background-position: 0 -150px;	}
+
+/* Check icons */
+.ui--ico--check {
+	&:after {
+		content: ' ';
+		position: absolute;
+		top: 0;
+		right: 32px;
+		@include size(15px 12px);
+		background-image: url("../img/check.png");
+		background-repeat: no-repeat;
+		background-position: 0 0;
+	}
+}
+
+/* Horizontal/Vertical icons */
+.ui--ico--horizontal { background-image: url("../img/icons-horizontal.png"); }
+.ui--ico--horizontal--small-arrows { @include size(5px 10px); }
+.ui--ico--horizontal--small-arrows-left { background-position: 0 0; }
+.ui--ico--horizontal--small-arrows-right { background-position: -248px 0; }
+
+.ui--ico--vertical { background-image: url("../img/icons-vertical.png"); }
+.ui--ico--vertical--loop {
+	@include size(14px 24px);
+	background-position: -57px -50px;
+}
+.ui--ico--vertical--small-arrows {
+	@include size(9px 5px);
+	background-position-x: -147px;
+}
+.ui--ico--vertical--small-arrows-top { background-position-y: -42px; }
+.ui--ico--vertical--small-arrows-down { background-position-y: -168px; }
+
+
+
+/* 
+* Badges
+*/
+.ui--badge {
+	display: block;
+	position: absolute;
+	bottom: -4px;
+	right: 1px;
+	@include size(13px 14px);
+	text-indent: 0;
+	border-radius: 60em;
+	text-decoration: none;
+}
+
+.ui--badge-gold {
+	color: $white;
+	background-color: $light-gold;
+}
+
+
+
+
+
+
+
+
+/* Special check case */
+#community-selection li,
+#interest-selection li,
+#feed-icon {
+	position: relative;
+}
+
+#community-selection li a:after {
+	top: 14px;
+	right: 12px;
+}
+
+/* Special widget case */
+.widget {
+	&#chat {
+		h3 {
+			padding-left: 24px;
+			text-indent: 0;
+		}
+	}
+}

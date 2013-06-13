@@ -12,16 +12,20 @@
 /* Import all application scss files */
 @import "mixins";
 @import "helpers";
-@import "icons";
+
 @import "layout";
-@import "buttons";
 @import "typography";
+@import "ui";
+
+// @import "icons"; // merge with ui
+// @import "buttons"; // merge with ui
+
+
 // @import "_colors.scss";
 // @import "_modals.scss";
 @import "forms";
 @import "lists";
 @import "comments";
-// @import "_tags.scss";
 @import "slideshow";
 @import "decorative";
 // @import "_misc.scss";

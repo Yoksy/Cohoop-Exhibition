@@ -19,42 +19,47 @@ h1, h2, h3 {
 	text-transform: uppercase;
 }
 
-h1 {
-	font-size: $alpha;
-}
+/* Font sizes */
+.typo-size-alpha { font-size: $alpha }
+.typo-size-beta { font-size: $beta }
+.typo-size-gamma { font-size: $gamma }
+.typo-size-delta { font-size: $delta }
+.typo-size-epsilon { font-size: $epsilon }
+.typo-size-luck { font-size: $luck }
+.typo-size-zeta { font-size: $zeta }
+.typo-size-micro { font-size: $micro }
+.typo-size-nano { font-size: $nano }
 
-h2 {
-	font-size: $beta;
-}
+h1 { @extend .typo-size-alpha; }
+h2 { @extend .typo-size-beta; }
+h3 { @extend .typo-size-gamma; }
+h4 { @extend .typo-size-delta; }
+h5, 
+p, 
+input, 
+textarea, 
+a { @extend .typo-size-epsilon; }
+h6, label { @extend .typo-size-zeta; }
 
-h3 {
-	font-size: $gamma;
-}
+a { text-decoration: none; }
 
-h4 {
-	font-size: $delta;
-}
-
-h5, p, input, textarea, a {
-	font-size: $epsilon;
-}
-
-h6, label {
-	font-size: $zeta;
-}
-
-a {
-	text-decoration: none;
-}
-
+/* Alignment */
 .align-center { text-align: center; }
-
 .align-right { text-align: right; }
 .align-left { text-align: left; }
 
+
+
+
+
+
+
+
+
 .small-text {
+	@extend .typo-size-micro;
+
 	color: $light-grey;
-	font-size: 1.1em;
 }
 
 .badge {
